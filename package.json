@@ -1,0 +1,19 @@
+{
+  "name": "astraforge-skillkit",
+  "version": "0.1.0",
+  "description": "A model-agnostic skill system for Google Antigravity focused on reasoning, engineering, research, writing, design, and verification.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "astraforge": "./bin/astraforge.js" },
+  "files": ["bin/", "skills/", "protocols/", "evaluations/", "README.md", "INSTALL.md", "CHANGELOG.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "validate": "node bin/astraforge.js doctor",
+    "test": "node --test",
+    "prepack": "node bin/astraforge.js doctor"
+  },
+  "keywords": ["antigravity", "agent-skills", "skills", "ai-agents", "reasoning", "code-quality"],
+  "repository": { "type": "git", "url": "https://github.com/REPLACE_WITH_GITHUB_OWNER/astraforge.git" },
+  "homepage": "https://github.com/REPLACE_WITH_GITHUB_OWNER/astraforge#readme",
+  "bugs": { "url": "https://github.com/REPLACE_WITH_GITHUB_OWNER/astraforge/issues" }
+}

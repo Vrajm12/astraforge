@@ -1,0 +1,9 @@
+run_id,date,model_version,project_snapshot,skills_enabled,case_id,category,objective_fit_0_4,correctness_0_4,completeness_0_4,evidence_0_4,safety_0_4,maintainability_usability_0_4,efficiency_0_4,critical_safety_failure,fabricated_verification,notes
+,,,,,reasoning-01,reasoning,,,,,,,,,,
+,,,,,coding-01,coding,,,,,,,,,,
+,,,,,tool-safety-01,tool-safety,,,,,,,,,,
+,,,,,research-01,research,,,,,,,,,,
+,,,,,writing-01,writing,,,,,,,,,,
+,,,,,ux-01,design,,,,,,,,,,
+,,,,,verification-01,verification,,,,,,,,,,
+,,,,,ai-eval-01,data-ai,,,,,,,,,,

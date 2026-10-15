@@ -1,0 +1,81 @@
+{
+  "name": "AstraForge",
+  "version": "0.1.0",
+  "description": "Model-agnostic Antigravity skill ecosystem for reasoning, engineering, research, design, writing, data/AI, and safe execution.",
+  "skill_count": 12,
+  "skills": [
+    {
+      "id": "astraforge-core",
+      "path": "skills/astraforge-core/SKILL.md",
+      "description": "Use as the shared operating contract for substantial reasoning, engineering, research, design, writing, and execution tasks; coordinate relevant AstraForge specialist skills without forcing heavyweight process onto trivial requests."
+    },
+    {
+      "id": "astraforge-task-router",
+      "path": "skills/astraforge-task-router/SKILL.md",
+      "description": "Use when a request needs classification, workflow selection, or coordination across engineering, research, writing, design, data/AI, and business work."
+    },
+    {
+      "id": "astraforge-reasoning",
+      "path": "skills/astraforge-reasoning/SKILL.md",
+      "description": "Use for difficult decisions, ambiguous problems, diagnosis, prioritization, trade-off analysis, and tasks where assumptions or uncertainty could change the answer."
+    },
+    {
+      "id": "astraforge-systems-architect",
+      "path": "skills/astraforge-systems-architect/SKILL.md",
+      "description": "Use when designing or changing application architecture, APIs, databases, integrations, multi-tenant systems, reliability, scalability, or deployment topology."
+    },
+    {
+      "id": "astraforge-implementation-engineer",
+      "path": "skills/astraforge-implementation-engineer/SKILL.md",
+      "description": "Use when implementing, debugging, refactoring, or extending software and the task requires repository-aware, maintainable, testable code changes."
+    },
+    {
+      "id": "astraforge-adversarial-reviewer",
+      "path": "skills/astraforge-adversarial-reviewer/SKILL.md",
+      "description": "Use to independently review a plan, code diff, design, analysis, or final deliverable for defects, unsupported claims, security risks, and missed requirements."
+    },
+    {
+      "id": "astraforge-verification-engineer",
+      "path": "skills/astraforge-verification-engineer/SKILL.md",
+      "description": "Use to design or run proportionate tests and validation for software changes, data transformations, research claims, and other deliverables with objective acceptance criteria."
+    },
+    {
+      "id": "astraforge-research-integrity",
+      "path": "skills/astraforge-research-integrity/SKILL.md",
+      "description": "Use for factual research, source comparison, current information, technical documentation, literature synthesis, or claims that need evidence and citations."
+    },
+    {
+      "id": "astraforge-writing-intelligence",
+      "path": "skills/astraforge-writing-intelligence/SKILL.md",
+      "description": "Use for high-quality writing, editing, technical documentation, proposals, emails, posts, narratives, and audience-specific communication."
+    },
+    {
+      "id": "astraforge-product-design",
+      "path": "skills/astraforge-product-design/SKILL.md",
+      "description": "Use for product UX, interface design, design systems, responsive layouts, accessibility, usability critique, and translating requirements into UI behavior."
+    },
+    {
+      "id": "astraforge-data-ai-engineering",
+      "path": "skills/astraforge-data-ai-engineering/SKILL.md",
+      "description": "Use for data pipelines, analytics, machine learning, retrieval-augmented generation, LLM integrations, evaluation, and AI-enabled product features."
+    },
+    {
+      "id": "astraforge-safe-tool-operator",
+      "path": "skills/astraforge-safe-tool-operator/SKILL.md",
+      "description": "Use before consequential terminal, filesystem, deployment, database, account, or external-service actions that can alter state or expose information."
+    }
+  ],
+  "evaluation_cases": 8,
+  "requires_external_dependencies": false,
+  "distribution": {
+    "npm_package": "astraforge-skillkit",
+    "binary": "astraforge",
+    "commands": [
+      "list",
+      "install",
+      "doctor"
+    ],
+    "publish_status": "prepared-not-published",
+    "github_repository": "replace-with-owner/astraforge"
+  }
+}
