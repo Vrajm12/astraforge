@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const packageRoot = path.resolve(here, '..');
 const skillsRoot = path.join(packageRoot, 'skills');
+const protocolsRoot = path.join(packageRoot, 'protocols');
 const version = JSON.parse(fs.readFileSync(path.join(packageRoot, 'package.json'), 'utf8')).version;
 const help = `AstraForge — model-agnostic agent skill system
 
@@ -63,6 +64,18 @@ function validate() {
   } catch { errors.push('Cannot parse evaluations/cases.json'); }
   return { ids, errors };
 }
+function bundleProtocols(dest) {
+  const skillFile = path.join(dest, 'SKILL.md');
+  const content = fs.readFileSync(skillFile, 'utf8');
+  const referenced = [...new Set([...content.matchAll(/\.\.\/\.\.\/protocols\/([a-z0-9._-]+\.md)/gi)].map(m => m[1]))];
+  if (!referenced.length) return;
+  const destProtocols = path.join(dest, 'protocols');
+  fs.mkdirSync(destProtocols, { recursive: true });
+  for (const file of referenced) {
+    fs.cpSync(path.join(protocolsRoot, file), path.join(destProtocols, file));
+  }
+  fs.writeFileSync(skillFile, content.replaceAll('../../protocols/', 'protocols/'), 'utf8');
+}
 function install(o) {
   const available = listSkills();
   const selected = o.all ? available : o.positional.filter(x => x !== 'install');
@@ -77,6 +90,7 @@ function install(o) {
     if (fs.existsSync(dest) && !o.force) { console.log(`SKIP  ${id} (already exists; use --force only if you intend to replace it)`); skipped++; continue; }
     if (fs.existsSync(dest)) fs.rmSync(dest, { recursive: true, force: true });
     fs.cpSync(src, dest, { recursive: true, errorOnExist: true, force: false });
+    bundleProtocols(dest);
     console.log(`ADD   ${id}`); installed++;
   }
   console.log(`\nAstraForge ${version}: ${installed} installed, ${skipped} skipped.\nDestination: ${destRoot}`);
