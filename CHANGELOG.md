@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — Protocol bundling and package metadata
+
+- Fixed installation of supporting protocol Markdown files alongside installed skills.
+- Rewrote protocol references in installed skill files to use paths that resolve within each installed skill directory.
+- Added regression coverage for protocol references during installation.
+- Corrected GitHub repository metadata.
+
 ## 0.1.0 — Initial AstraForge system
 
 - Added 12 focused, model-agnostic skills.

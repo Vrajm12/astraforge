@@ -1,6 +1,6 @@
 {
   "name": "astraforge-skillkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A model-agnostic skill system for Google Antigravity focused on reasoning, engineering, research, writing, design, and verification.",
   "license": "MIT",
   "type": "module",

@@ -6,3 +6,6 @@ coverage/
 
 # Generated Antigravity skill installations
 .agents/
+
+# Generated npm package archives
+*.tgz
